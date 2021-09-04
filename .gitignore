@@ -1,0 +1,19 @@
+## https://github.com/github/gitignore
+
+## Xcode ##
+## User settings
+xcuserdata/
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+*.xcodeproj
+
+.build/
+
