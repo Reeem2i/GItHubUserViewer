@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		379E331426E28CD400865D8F /* GitHubUserViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E331326E28CD400865D8F /* GitHubUserViewerUITests.swift */; };
 		379E332C26E3838100865D8F /* RootViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E332B26E3838100865D8F /* RootViewController.storyboard */; };
 		379E332F26E385E400865D8F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E332E26E385E400865D8F /* RootViewController.swift */; };
+		379E333826E38FD000865D8F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 379E333726E38FD000865D8F /* Alamofire */; };
+		379E333B26E390A700865D8F /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 379E333A26E390A700865D8F /* Rswift */; };
+		379E334326E39C5E00865D8F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E334226E39C5E00865D8F /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		379E332A26E380E300865D8F /* GitHubUserViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GitHubUserViewerUITests.xctest; path = "/Users/reimi/Documents/GitHubUserViewer/build/Debug-iphoneos/GitHubUserViewerUITests.xctest"; sourceTree = "<absolute>"; };
 		379E332B26E3838100865D8F /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		379E332E26E385E400865D8F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		379E334226E39C5E00865D8F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379E333826E38FD000865D8F /* Alamofire in Frameworks */,
+				379E333B26E390A700865D8F /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,7 @@
 		379E32F026E28CD000865D8F /* GitHubUserViewer */ = {
 			isa = PBXGroup;
 			children = (
+				379E334226E39C5E00865D8F /* R.generated.swift */,
 				379E332D26E385CB00865D8F /* Root */,
 				379E32F126E28CD000865D8F /* AppDelegate.swift */,
 				379E32FA26E28CD400865D8F /* Assets.xcassets */,
@@ -129,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 379E331826E28CD400865D8F /* Build configuration list for PBXNativeTarget "GitHubUserViewer" */;
 			buildPhases = (
+				379E333C26E3952800865D8F /* ShellScript */,
 				379E32EA26E28CD000865D8F /* Sources */,
 				379E32EB26E28CD000865D8F /* Frameworks */,
 				379E32EC26E28CD000865D8F /* Resources */,
@@ -139,6 +147,8 @@
 			);
 			name = GitHubUserViewer;
 			packageProductDependencies = (
+				379E333726E38FD000865D8F /* Alamofire */,
+				379E333A26E390A700865D8F /* Rswift */,
 			);
 			productName = GitHubUserViewer;
 			productReference = 379E332826E380E300865D8F /* GitHubUserViewer.app */;
@@ -212,6 +222,8 @@
 			);
 			mainGroup = 379E32E526E28CD000865D8F;
 			packageReferences = (
+				379E333626E38FD000865D8F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				379E333926E390A700865D8F /* XCRemoteSwiftPackageReference "R.swift" */,
 			);
 			productRefGroup = 379E32E526E28CD000865D8F;
 			projectDirPath = "";
@@ -251,6 +263,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		379E333C26E3952800865D8F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which rswift >/dev/null; then\nrswift generate \"$SRCROOT/R.generated.swift\"\nelse\necho \"warning: rswift not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		379E32EA26E28CD000865D8F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -258,6 +293,7 @@
 			files = (
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
 				379E32F226E28CD000865D8F /* AppDelegate.swift in Sources */,
+				379E334326E39C5E00865D8F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +618,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		379E333626E38FD000865D8F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		379E333926E390A700865D8F /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		379E333726E38FD000865D8F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 379E333626E38FD000865D8F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		379E333A26E390A700865D8F /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 379E333926E390A700865D8F /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 379E32E626E28CD000865D8F /* Project object */;
 }

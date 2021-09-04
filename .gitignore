@@ -17,3 +17,5 @@ Package.resolved
 
 .build/
 
+## RSwift
+*.generated.swift
