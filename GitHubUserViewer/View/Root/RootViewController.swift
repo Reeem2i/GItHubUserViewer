@@ -11,7 +11,7 @@ class RootViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        API().request(UserListRequest())
         // Do any additional setup after loading the view.
     }
 }
