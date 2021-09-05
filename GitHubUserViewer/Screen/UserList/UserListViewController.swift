@@ -18,6 +18,8 @@ final class UserListViewController: UIViewController {
         searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: R.nib.userListCell.name, bundle: nil),
+                           forCellReuseIdentifier: R.nib.userListCell.name)
     }
 }
 
@@ -27,6 +29,7 @@ private extension UserListViewController {
             switch result {
             case .success(let data):
                 self?.userList = data.items
+                self?.tableView.reloadData()
             case .failure:
                 // TODO: エラー表示
                 break
@@ -48,6 +51,7 @@ private extension UserListViewController {
 
 extension UserListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         guard let searchText = searchBar.text, !searchText.isEmpty else {
             showEmptyError()
             return
@@ -66,6 +70,8 @@ extension UserListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.userListCell.name, for: indexPath) as? UserListCell else { return UITableViewCell() }
+        cell.setUser(userList[indexPath.row])
+        return cell
     }
 }
