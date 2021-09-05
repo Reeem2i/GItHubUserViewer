@@ -32,8 +32,8 @@ final class UserListViewModel: ViewModel {
             guard let self = self else { return }
             switch result {
             case .success(let data):
-                self.state = .loaded
                 self.userList = data.items
+                self.state = .loaded
             case .failure(let error):
                 self.state = .error(message: error.message)
             }
