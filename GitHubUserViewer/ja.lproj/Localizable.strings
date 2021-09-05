@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  GitHubUserViewer
+
+  Created by Reimi Matsumoto on 2021/09/06.
+  
+*/
+
+// MARK: - Common
+"ok" = "OK";
+"retry" = "再読み込み";
+
+// MARK: - Errors
+"error_empty" = "検索条件を入力してください";
+"error_connection" = "通信に失敗しました";
+"error_parse" = "結果の読み込みに失敗しました";
+"error_unknown" = "予期せぬエラーが発生しました";
