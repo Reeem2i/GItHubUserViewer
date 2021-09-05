@@ -34,7 +34,7 @@ final class ErrorViewController: UIViewController {
 // MARK: - Private Functions
 private extension ErrorViewController {
     func setupSubviews() {
-        retryButton.setTitle("再読み込み", for: .normal)
+        retryButton.setTitle(R.string.localizable.retry(), for: .normal)
         retryButton.layer.cornerRadius = retryButton.frame.height / 2
     }
 }

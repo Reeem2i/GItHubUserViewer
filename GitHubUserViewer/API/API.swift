@@ -21,10 +21,10 @@ enum APIError: Error {
     
     var message: String {
         switch self {
-        case .connection: return "通信に失敗しました"
-        case .parse: return "結果の読み込みに失敗しました"
+        case .connection: return R.string.localizable.error_connection()
+        case .parse: return R.string.localizable.error_parse()
         case .server(let message): return message
-        case .unknown: return "予期せぬエラーが発生しました"
+        case .unknown: return R.string.localizable.error_unknown()
         }
     }
 }
