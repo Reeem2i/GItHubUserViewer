@@ -7,20 +7,29 @@
 
 import UIKit
 
+enum UserDetailViewControllerState {
+    case  idle, loading, loaded, error(message: String?)
+}
+
 class UserDetailViewController: UIViewController {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userFullNameLabel: UILabel!
     @IBOutlet weak var followLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
+    private var state: UserDetailViewControllerState = .idle
+    private var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
+        fetchUserDetail()
     }
     
-    static func instantieate() -> UserDetailViewController {
-        return R.storyboard.userDetailViewController.instantiateInitialViewController()!
+    static func instantieate(user: User) -> UserDetailViewController {
+        let viewController = R.storyboard.userDetailViewController.instantiateInitialViewController()!
+        viewController.user = user
+        return viewController
     }
 }
 
@@ -38,5 +47,19 @@ private extension UserDetailViewController {
         userFullNameLabel.text = "User FullName"
         followLabel.text = "1288"
         followerLabel.text = "489"
+    }
+    
+    func fetchUserDetail() {
+        guard let user = user else { return }
+        API.request(UserDetailRequest(user: user)) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                self.state = .loaded
+                print(data)
+            case .failure(let error):
+                self.state = .error(message: error.message)
+            }
+        }
     }
 }

@@ -30,7 +30,7 @@ enum APIError: Error {
 }
 
 final class API {
-    func request<T: Request>(_ request: T, completion: @escaping (APIResult<T.Response>) -> Void) {
+    static func request<T: Request>(_ request: T, completion: @escaping (APIResult<T.Response>) -> Void) {
         AF.request(request.url,
                    method: request.method,
                    parameters: request.parameter,

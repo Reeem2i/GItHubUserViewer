@@ -87,7 +87,7 @@ private extension UserListViewController {
             return
         }
         state = .loading
-        API().request(UserListRequest(searchWord: word)) { [weak self] result in
+        API.request(UserListRequest(searchWord: word)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let data):
@@ -121,7 +121,7 @@ extension UserListViewController: UISearchBarDelegate {
 // MARK: - UserListContentViewControllerDelegate
 extension UserListViewController: UserListContentViewControllerDelegate {
     func userListContentViewController(_ viewController: UserListContentViewController, didSelect user: User) {
-        let viewController = UserDetailViewController.instantieate()
+        let viewController = UserDetailViewController.instantieate(user: user)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
