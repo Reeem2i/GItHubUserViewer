@@ -14,6 +14,8 @@
 		370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DFECF26E4CE40000F6A79 /* UserListContentViewController.storyboard */; };
 		370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */; };
 		370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DFED426E4E801000F6A79 /* ErrorViewController.swift */; };
+		370DFED826E50276000F6A79 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DFED726E50276000F6A79 /* UserDetailViewController.swift */; };
+		370DFEDA26E50285000F6A79 /* UserDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DFED926E50285000F6A79 /* UserDetailViewController.storyboard */; };
 		379E32F226E28CD000865D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E32F126E28CD000865D8F /* AppDelegate.swift */; };
 		379E32FB26E28CD400865D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379E32FA26E28CD400865D8F /* Assets.xcassets */; };
 		379E32FE26E28CD400865D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E32FC26E28CD400865D8F /* LaunchScreen.storyboard */; };
@@ -58,6 +60,8 @@
 		370DFECF26E4CE40000F6A79 /* UserListContentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListContentViewController.storyboard; sourceTree = "<group>"; };
 		370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ErrorViewController.storyboard; sourceTree = "<group>"; };
 		370DFED426E4E801000F6A79 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		370DFED726E50276000F6A79 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		370DFED926E50285000F6A79 /* UserDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetailViewController.storyboard; sourceTree = "<group>"; };
 		379E32F126E28CD000865D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379E32FA26E28CD400865D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		379E32FD26E28CD400865D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		370DFEC326E4B62E000F6A79 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				370DFED626E50189000F6A79 /* UserDetail */,
 				370DFED126E4E7D4000F6A79 /* Common */,
 				379E332D26E385CB00865D8F /* Root */,
 				37B03BDF26E4A4C200C03E1A /* UserList */,
@@ -137,6 +142,15 @@
 				370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		370DFED626E50189000F6A79 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				370DFED726E50276000F6A79 /* UserDetailViewController.swift */,
+				370DFED926E50285000F6A79 /* UserDetailViewController.storyboard */,
+			);
+			path = UserDetail;
 			sourceTree = "<group>";
 		};
 		379E32E526E28CD000865D8F = {
@@ -347,6 +361,7 @@
 				370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */,
 				370DFEC826E4B68E000F6A79 /* UserListCell.xib in Resources */,
 				370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */,
+				370DFEDA26E50285000F6A79 /* UserDetailViewController.storyboard in Resources */,
 				370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */,
 				379E32FE26E28CD400865D8F /* LaunchScreen.storyboard in Resources */,
 				37B03BE126E4A4E200C03E1A /* UserListViewController.storyboard in Resources */,
@@ -398,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370DFED826E50276000F6A79 /* UserDetailViewController.swift in Sources */,
 				379E334726E3ACD000865D8F /* User.swift in Sources */,
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,

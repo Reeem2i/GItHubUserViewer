@@ -43,6 +43,7 @@ private extension UserListViewController {
     func setupSubviews() {
         loadingView.isHidden = true
         searchBar.delegate = self
+        contentTableViewController.delegate = self
         errorViewController.action = { [weak self] in
             guard let self = self else { return }
             self.search(by: self.searchText)
@@ -120,6 +121,7 @@ extension UserListViewController: UISearchBarDelegate {
 // MARK: - UserListContentViewControllerDelegate
 extension UserListViewController: UserListContentViewControllerDelegate {
     func userListContentViewController(_ viewController: UserListContentViewController, didSelect user: User) {
-        // TODO: ユーザー詳細画面に遷移
+        let viewController = UserDetailViewController.instantieate()
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
