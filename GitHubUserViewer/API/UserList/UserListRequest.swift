@@ -13,8 +13,13 @@ final class UserListRequest: Request {
     var url: URL = URL(string: "https://api.github.com/search/users")!
     var parameter: [String : Any] {
         var parameter: [String: Any] = [:]
-        // TODO: 仮パラメータなので修正する
-        parameter["q"] = "tom repos:>42 followers:>1000"
+        parameter["q"] = searchWord
         return parameter
+    }
+    
+    let searchWord: String
+    
+    init(searchWord: String) {
+        self.searchWord = searchWord
     }
 }
