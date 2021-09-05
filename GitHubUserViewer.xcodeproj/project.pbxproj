@@ -51,9 +51,6 @@
 		379E330A26E28CD400865D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379E331326E28CD400865D8F /* GitHubUserViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUserViewerUITests.swift; sourceTree = "<group>"; };
 		379E331526E28CD400865D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		379E332826E380E300865D8F /* GitHubUserViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GitHubUserViewer.app; path = "/Users/reimi/Documents/GitHubUserViewer/build/Debug-iphoneos/GitHubUserViewer.app"; sourceTree = "<absolute>"; };
-		379E332926E380E300865D8F /* GitHubUserViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GitHubUserViewerTests.xctest; path = "/Users/reimi/Documents/GitHubUserViewer/build/Debug-iphoneos/GitHubUserViewerTests.xctest"; sourceTree = "<absolute>"; };
-		379E332A26E380E300865D8F /* GitHubUserViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GitHubUserViewerUITests.xctest; path = "/Users/reimi/Documents/GitHubUserViewer/build/Debug-iphoneos/GitHubUserViewerUITests.xctest"; sourceTree = "<absolute>"; };
 		379E332B26E3838100865D8F /* RootViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootViewController.storyboard; sourceTree = "<group>"; };
 		379E332E26E385E400865D8F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		379E334226E39C5E00865D8F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -63,6 +60,10 @@
 		379E334D26E3DA0600865D8F /* RequestHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeader.swift; sourceTree = "<group>"; };
 		379E335026E3DA2C00865D8F /* UserListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListResponse.swift; sourceTree = "<group>"; };
 		379E335226E3DA4900865D8F /* UserListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRequest.swift; sourceTree = "<group>"; };
+		37B03BDB26E4718800C03E1A /* GitHubUserViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUserViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B03BDC26E4718800C03E1A /* GitHubUserViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUserViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B03BDD26E4718800C03E1A /* GitHubUserViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUserViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37B03BDE26E471AF00C03E1A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +96,13 @@
 		379E32E526E28CD000865D8F = {
 			isa = PBXGroup;
 			children = (
+				37B03BDE26E471AF00C03E1A /* README.md */,
 				379E32F026E28CD000865D8F /* GitHubUserViewer */,
 				379E330726E28CD400865D8F /* GitHubUserViewerTests */,
 				379E331226E28CD400865D8F /* GitHubUserViewerUITests */,
+				37B03BDB26E4718800C03E1A /* GitHubUserViewer.app */,
+				37B03BDC26E4718800C03E1A /* GitHubUserViewerTests.xctest */,
+				37B03BDD26E4718800C03E1A /* GitHubUserViewerUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,7 +206,7 @@
 				379E333A26E390A700865D8F /* Rswift */,
 			);
 			productName = GitHubUserViewer;
-			productReference = 379E332826E380E300865D8F /* GitHubUserViewer.app */;
+			productReference = 37B03BDB26E4718800C03E1A /* GitHubUserViewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		379E330326E28CD400865D8F /* GitHubUserViewerTests */ = {
@@ -219,7 +224,7 @@
 			);
 			name = GitHubUserViewerTests;
 			productName = GitHubUserViewerTests;
-			productReference = 379E332926E380E300865D8F /* GitHubUserViewerTests.xctest */;
+			productReference = 37B03BDC26E4718800C03E1A /* GitHubUserViewerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		379E330E26E28CD400865D8F /* GitHubUserViewerUITests */ = {
@@ -237,7 +242,7 @@
 			);
 			name = GitHubUserViewerUITests;
 			productName = GitHubUserViewerUITests;
-			productReference = 379E332A26E380E300865D8F /* GitHubUserViewerUITests.xctest */;
+			productReference = 37B03BDD26E4718800C03E1A /* GitHubUserViewerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

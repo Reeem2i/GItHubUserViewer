@@ -1,4 +1,4 @@
-[branchname] 
+[[branchname]] 
 
 ■対応内容
 * 
