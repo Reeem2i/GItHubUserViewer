@@ -8,24 +8,34 @@
 import Alamofire
 import Foundation
 
+enum APIResult<T: Codable> {
+    case success(_ result: T)
+    case failure(_ error: APIError)
+}
+
+enum APIError: Error {
+    case connection
+    case perse
+    case server(_ message: String)
+    case unknown
+}
+
 final class API {
-    func request<T: Request>(_ request: T) {
-        // TODO: エラーハンドリング
+    func request<T: Request>(_ request: T, completion: @escaping (APIResult<T.Response>) -> Void) {
         AF.request(request.url,
                    method: request.method,
                    parameters: request.parameter,
                    headers: request.header)
             .responseJSON { response in
                 guard let data = response.data else {
-                    print("failure")
+                    completion(.failure(.unknown))
                     return
                 }
                 do {
-                    print(String(data: data, encoding: .utf8)!)
                     let users = try JSONDecoder().decode(T.Response.self, from: data)
-                    print(users)
+                    completion(.success(users))
                 } catch {
-                    print("failure")
+                    completion(.failure(.perse))
                 }
             }
     }
