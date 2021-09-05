@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupView() {
-        let rootViewController = R.storyboard.rootViewController.instantiateInitialViewController()
-        let navigationController = UINavigationController(rootViewController: rootViewController!)
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+        window?.rootViewController = RootViewController()
         window?.makeKeyAndVisible()
     }
 }
