@@ -41,6 +41,7 @@
 		37CE02F726E529B0004D3B19 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE02F626E529B0004D3B19 /* UIViewController+Extension.swift */; };
 		37CE02FA26E52C39004D3B19 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE02F926E52C39004D3B19 /* UserDetailViewModel.swift */; };
 		37CE02FE26E532A9004D3B19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37CE030026E532A9004D3B19 /* Localizable.strings */; };
+		37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030126E53646004D3B19 /* Array+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		37CE02F926E52C39004D3B19 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		37CE02FD26E5325F004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		37CE02FF26E532A9004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37CE030126E53646004D3B19 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 			children = (
 				37CE02F426E525CE004D3B19 /* UIAlertController+Extension.swift */,
 				37CE02F626E529B0004D3B19 /* UIViewController+Extension.swift */,
+				37CE030126E53646004D3B19 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				37CE02EB26E510E9004D3B19 /* UserDetailRequest.swift in Sources */,
 				370DFED826E50276000F6A79 /* UserDetailViewController.swift in Sources */,
 				379E334726E3ACD000865D8F /* User.swift in Sources */,
+				37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */,
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,

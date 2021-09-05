@@ -38,7 +38,8 @@ final class UserListContentViewController: UIViewController {
 extension UserListContentViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.userListContentViewController(self, didSelect: userList[indexPath.row])
+        guard let user = userList[safe: indexPath.row] else { return }
+        delegate?.userListContentViewController(self, didSelect: user)
     }
 }
 
@@ -49,8 +50,9 @@ extension UserListContentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.userListCell.name, for: indexPath) as? UserListCell else { return UITableViewCell() }
-        cell.setUser(userList[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.userListCell.name, for: indexPath) as? UserListCell,
+              let user = userList[safe: indexPath.row] else { return UITableViewCell() }
+        cell.setUser(user)
         return cell
     }
 }
