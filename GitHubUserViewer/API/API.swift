@@ -15,9 +15,18 @@ enum APIResult<T: Codable> {
 
 enum APIError: Error {
     case connection
-    case perse
+    case parse
     case server(_ message: String)
     case unknown
+    
+    var message: String {
+        switch self {
+        case .connection: return "通信に失敗しました"
+        case .parse: return "結果の読み込みに失敗しました"
+        case .server(let message): return message
+        case .unknown: return "予期せぬエラーが発生しました"
+        }
+    }
 }
 
 final class API {
@@ -27,15 +36,20 @@ final class API {
                    parameters: request.parameter,
                    headers: request.header)
             .responseJSON { response in
-                guard let data = response.data else {
-                    completion(.failure(.unknown))
-                    return
-                }
-                do {
-                    let users = try JSONDecoder().decode(T.Response.self, from: data)
-                    completion(.success(users))
-                } catch {
-                    completion(.failure(.perse))
+                switch response.result {
+                case .success:
+                    guard let data = response.data else {
+                        completion(.failure(.unknown))
+                        return
+                    }
+                    do {
+                        let users = try JSONDecoder().decode(T.Response.self, from: data)
+                        completion(.success(users))
+                    } catch {
+                        completion(.failure(.parse))
+                    }
+                case .failure:
+                    completion(.failure(.connection))
                 }
             }
     }

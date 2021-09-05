@@ -10,7 +10,7 @@ import UIKit
 final class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let viewController = R.storyboard.userListViewController.instantiateInitialViewController()!
+        let viewController = UserListViewController.instantieate()
         let navigationController = UINavigationController(rootViewController: viewController)
         addChild(navigationController)
         view.addSubview(navigationController.view)

@@ -8,7 +8,6 @@
 import UIKit
 
 final class UserListCell: UITableViewCell {
-
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     
@@ -23,6 +22,7 @@ final class UserListCell: UITableViewCell {
     }
 }
 
+// MARK: - Private Functions
 private extension UserListCell {
     func setupSubviews() {
         iconImageView.layer.cornerRadius = iconImageView.frame.height / 2

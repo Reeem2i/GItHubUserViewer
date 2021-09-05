@@ -7,32 +7,93 @@
 
 import UIKit
 
-final class UserListViewController: UIViewController {
+enum UserListViewControllerState {
+    case  idle, loading, loaded, error(message: String?)
+}
 
+final class UserListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
-    private var userList: [User] = []
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    private var state: UserListViewControllerState = .idle {
+        didSet {
+            didChangeState(state)
+        }
+    }
+    private var contentTableViewController = UserListContentViewController.instantiate()
+    private var errorViewController = ErrorViewController.instantiate()
+    private var searchText: String? {
+        didSet {
+            search(by: searchText)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: R.nib.userListCell.name, bundle: nil),
-                           forCellReuseIdentifier: R.nib.userListCell.name)
+        setupSubviews()
+    }
+    
+    static func instantieate() -> UserListViewController {
+        return R.storyboard.userListViewController.instantiateInitialViewController()!
     }
 }
 
+// MARK: - Private Functions
 private extension UserListViewController {
-    func search(by word: String) {
+    func setupSubviews() {
+        loadingView.isHidden = true
+        searchBar.delegate = self
+        errorViewController.action = { [weak self] in
+            guard let self = self else { return }
+            self.search(by: self.searchText)
+        }
+    }
+    
+    func add(_ viewController: UIViewController) {
+        addChild(viewController)
+        containerView.addSubview(viewController.view)
+        viewController.didMove(toParent: self)
+    }
+    
+    func remove(_ viewController: UIViewController) {
+        viewController.willMove(toParent: nil)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParent()
+    }
+    
+    func didChangeState(_ state: UserListViewControllerState) {
+        switch state {
+        case .idle:
+            break
+        case .loading:
+            loadingView.isHidden = false
+            loadingView.startAnimating()
+        case .loaded:
+            loadingView.isHidden = true
+            loadingView.stopAnimating()
+            add(contentTableViewController)
+        case .error(let message):
+            loadingView.isHidden = true
+            loadingView.stopAnimating()
+            add(errorViewController)
+            errorViewController.setMessssge(message)
+        }
+    }
+    
+    func search(by word: String?) {
+        guard let word = word, !word.isEmpty else {
+            showEmptyError()
+            return
+        }
+        state = .loading
         API().request(UserListRequest(searchWord: word)) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let data):
-                self?.userList = data.items
-                self?.tableView.reloadData()
-            case .failure:
-                // TODO: エラー表示
-                break
+                self.state = .loaded
+                self.contentTableViewController.updateUserList(data.items)
+            case .failure(let error):
+                self.state = .error(message: error.message)
             }
         }
     }
@@ -49,29 +110,16 @@ private extension UserListViewController {
     }
 }
 
+// MARK: - UISearchBarDelegate
 extension UserListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        guard let searchText = searchBar.text, !searchText.isEmpty else {
-            showEmptyError()
-            return
-        }
-        search(by: searchText)
+        searchText = searchBar.text
     }
 }
 
-extension UserListViewController: UITableViewDelegate {
-    
-}
-
-extension UserListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: R.nib.userListCell.name, for: indexPath) as? UserListCell else { return UITableViewCell() }
-        cell.setUser(userList[indexPath.row])
-        return cell
+// MARK: - UserListContentViewControllerDelegate
+extension UserListViewController: UserListContentViewControllerDelegate {
+    func userListContentViewController(_ viewController: UserListContentViewController, didSelect user: User) {
+        // TODO: ユーザー詳細画面に遷移
     }
 }

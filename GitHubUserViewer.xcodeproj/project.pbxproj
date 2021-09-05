@@ -10,6 +10,10 @@
 		370DFEC726E4B68E000F6A79 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DFEC526E4B68E000F6A79 /* UserListCell.swift */; };
 		370DFEC826E4B68E000F6A79 /* UserListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370DFEC626E4B68E000F6A79 /* UserListCell.xib */; };
 		370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370DFEC926E4BBDD000F6A79 /* Images.xcassets */; };
+		370DFECE26E4CE34000F6A79 /* UserListContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DFECD26E4CE34000F6A79 /* UserListContentViewController.swift */; };
+		370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DFECF26E4CE40000F6A79 /* UserListContentViewController.storyboard */; };
+		370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */; };
+		370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370DFED426E4E801000F6A79 /* ErrorViewController.swift */; };
 		379E32F226E28CD000865D8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E32F126E28CD000865D8F /* AppDelegate.swift */; };
 		379E32FB26E28CD400865D8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379E32FA26E28CD400865D8F /* Assets.xcassets */; };
 		379E32FE26E28CD400865D8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379E32FC26E28CD400865D8F /* LaunchScreen.storyboard */; };
@@ -50,6 +54,10 @@
 		370DFEC526E4B68E000F6A79 /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		370DFEC626E4B68E000F6A79 /* UserListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListCell.xib; sourceTree = "<group>"; };
 		370DFEC926E4BBDD000F6A79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		370DFECD26E4CE34000F6A79 /* UserListContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListContentViewController.swift; sourceTree = "<group>"; };
+		370DFECF26E4CE40000F6A79 /* UserListContentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserListContentViewController.storyboard; sourceTree = "<group>"; };
+		370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ErrorViewController.storyboard; sourceTree = "<group>"; };
+		370DFED426E4E801000F6A79 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		379E32F126E28CD000865D8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379E32FA26E28CD400865D8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		379E32FD26E28CD400865D8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +112,7 @@
 		370DFEC326E4B62E000F6A79 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				370DFED126E4E7D4000F6A79 /* Common */,
 				379E332D26E385CB00865D8F /* Root */,
 				37B03BDF26E4A4C200C03E1A /* UserList */,
 			);
@@ -115,8 +124,19 @@
 			children = (
 				370DFEC526E4B68E000F6A79 /* UserListCell.swift */,
 				370DFEC626E4B68E000F6A79 /* UserListCell.xib */,
+				370DFECD26E4CE34000F6A79 /* UserListContentViewController.swift */,
+				370DFECF26E4CE40000F6A79 /* UserListContentViewController.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		370DFED126E4E7D4000F6A79 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				370DFED426E4E801000F6A79 /* ErrorViewController.swift */,
+				370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		379E32E526E28CD000865D8F = {
@@ -324,8 +344,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */,
 				370DFEC826E4B68E000F6A79 /* UserListCell.xib in Resources */,
 				370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */,
+				370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */,
 				379E32FE26E28CD400865D8F /* LaunchScreen.storyboard in Resources */,
 				37B03BE126E4A4E200C03E1A /* UserListViewController.storyboard in Resources */,
 				379E32FB26E28CD400865D8F /* Assets.xcassets in Resources */,
@@ -378,7 +400,9 @@
 			files = (
 				379E334726E3ACD000865D8F /* User.swift in Sources */,
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
+				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
+				370DFECE26E4CE34000F6A79 /* UserListContentViewController.swift in Sources */,
 				379E335126E3DA2C00865D8F /* UserListResponse.swift in Sources */,
 				379E334E26E3DA0600865D8F /* RequestHeader.swift in Sources */,
 				37B03BE326E4A68C00C03E1A /* UserListViewController.swift in Sources */,
