@@ -12,7 +12,7 @@ struct Repository: Codable {
     let isFork: Bool
     let language: String?
     let star: Int
-    let description: String
+    let description: String?
     let repositoryURL: URL
     
     enum CodingKeys: String, CodingKey {
