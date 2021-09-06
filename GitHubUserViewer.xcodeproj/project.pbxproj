@@ -44,6 +44,7 @@
 		37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030126E53646004D3B19 /* Array+Extension.swift */; };
 		37CE030626E5CBFA004D3B19 /* RepositoryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */; };
 		37CE030926E5D06E004D3B19 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030826E5D06E004D3B19 /* Repository.swift */; };
+		37CE031026E5EBC2004D3B19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CE030F26E5EBC2004D3B19 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		37CE030126E53646004D3B19 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRequest.swift; sourceTree = "<group>"; };
 		37CE030826E5D06E004D3B19 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		37CE030F26E5EBC2004D3B19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				379E334226E39C5E00865D8F /* R.generated.swift */,
 				370DFEC926E4BBDD000F6A79 /* Images.xcassets */,
 				37CE030026E532A9004D3B19 /* Localizable.strings */,
+				37CE030F26E5EBC2004D3B19 /* Colors.xcassets */,
 			);
 			path = GitHubUserViewer;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 			files = (
 				370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */,
 				370DFEC826E4B68E000F6A79 /* UserListCell.xib in Resources */,
+				37CE031026E5EBC2004D3B19 /* Colors.xcassets in Resources */,
 				370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */,
 				370DFEDA26E50285000F6A79 /* UserDetailViewController.storyboard in Resources */,
 				370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */,
