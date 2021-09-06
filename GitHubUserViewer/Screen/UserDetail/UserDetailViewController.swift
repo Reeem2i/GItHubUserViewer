@@ -9,10 +9,13 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
     
-    @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var headerView: UIView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     private var viewModel: UserDetailViewModel?
     private let headerContentView = UserDetailHeaderView.instantiate()
+    private var errorViewController = ErrorViewController.instantiate()
     private let headerHeight: CGFloat = 320.0
     private let estimatedRowHeight: CGFloat = 100.0
     
@@ -20,12 +23,9 @@ class UserDetailViewController: UIViewController {
         super.viewDidLoad()
         setupSubviews()
         viewModel?.delegate = self
-        viewModel?.fetchUserDetail()
-        viewModel?.fetchRepositoryList()
+        viewModel?.fetch()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.estimatedRowHeight = estimatedRowHeight
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     static func instantieate(user: User) -> UserDetailViewController {
@@ -41,8 +41,13 @@ private extension UserDetailViewController {
         headerView.addSubview(headerContentView)
         tableView.register(UINib(nibName: R.nib.repositoryListCell.name, bundle: nil),
                            forCellReuseIdentifier: R.nib.repositoryListCell.name)
+        tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.contentInset.top = headerHeight
         tableView.backgroundColor = .clear
+        errorViewController.action = { [weak self] in
+            self?.viewModel?.fetch()
+        }
     }
 }
 
@@ -75,19 +80,37 @@ extension UserDetailViewController: UserDetailViewModelDelegate {
     func userDetailViewModel(_ viewModel: UserDetailViewModel, didUpdate state: UserDetailViewModelState) {
         switch state {
         case .idle:
-            break
+            tableView.isHidden = true
         case .loading:
-            break
+            tableView.isHidden = true
+            loadingView.startLoading()
         case .userDetailLoaded:
+            loadingView.stopLoading()
             guard let detail = viewModel.userDetail else { return }
             headerContentView.setUserDetail(detail)
             headerContentView.setNeedsLayout()
-        case .userDetailError(message: let message):
-            break
+        case .userDetailError:
+            loadingView.stopLoading()
+            guard let user = viewModel.user else { return }
+            headerContentView.setMinimumData(user)
         case .repositoryListLoaded:
-            tableView.reloadData()
+            loadingView.stopLoading()
+            if viewModel.repositoryList.isEmpty {
+                tableView.isHidden = true
+                add(errorViewController, container: containerView)
+                errorViewController.setMessssge(R.string.localizable.error_result_empty())
+                errorViewController.retryButton.isHidden = true
+            } else {
+                remove(errorViewController)
+                tableView.isHidden = false
+                tableView.reloadData()
+            }
         case .repositoryListError(message: let message):
-            break
+            loadingView.stopLoading()
+            tableView.isHidden = true
+            add(errorViewController, container: containerView)
+            errorViewController.setMessssge(message)
+            errorViewController.retryButton.isHidden = false
         }
     }
 }

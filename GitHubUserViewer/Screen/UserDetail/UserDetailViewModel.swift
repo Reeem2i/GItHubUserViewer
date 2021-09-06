@@ -30,7 +30,12 @@ final class UserDetailViewModel: ViewModel {
         self.user = user
     }
     
-    func fetchUserDetail() {
+    func fetch() {
+        fetchUserDetail()
+        fetchRepositoryList()
+    }
+    
+    private func fetchUserDetail() {
         guard let user = user else { return }
         state = .loading
         API.request(UserDetailRequest(user: user)) { [weak self] result in
@@ -45,7 +50,7 @@ final class UserDetailViewModel: ViewModel {
         }
     }
     
-    func fetchRepositoryList() {
+    private func fetchRepositoryList() {
         guard let user = user else { return }
         state = .loading
         API.request(RepositoryListRequest(user: user)) { [weak self] result in

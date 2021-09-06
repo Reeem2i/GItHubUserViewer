@@ -17,6 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-UB-Cbj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60n-WP-Bow">
                                 <rect key="frame" x="0.0" y="44" width="414" height="330"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -24,25 +28,35 @@
                                     <constraint firstAttribute="height" constant="330" id="iQS-4Z-xwf"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bT-UB-Cbj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fWh-xP-4Yz">
+                                <rect key="frame" x="197" y="565" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-Z8-uBP">
+                                <rect key="frame" x="0.0" y="374" width="414" height="522"/>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5bT-UB-Cbj" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="61B-L1-ycr"/>
                             <constraint firstItem="60n-WP-Bow" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="8ou-7b-END"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ht0-Z8-uBP" secondAttribute="trailing" id="CNA-v3-dJo"/>
+                            <constraint firstItem="fWh-xP-4Yz" firstAttribute="centerX" secondItem="Ht0-Z8-uBP" secondAttribute="centerX" id="J5f-7Z-1R9"/>
                             <constraint firstItem="60n-WP-Bow" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="KMC-5D-ril"/>
+                            <constraint firstAttribute="bottom" secondItem="Ht0-Z8-uBP" secondAttribute="bottom" id="Mj9-uT-gcN"/>
+                            <constraint firstItem="Ht0-Z8-uBP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Pj2-Im-bTl"/>
                             <constraint firstItem="5bT-UB-Cbj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TAc-7y-VN7"/>
+                            <constraint firstItem="fWh-xP-4Yz" firstAttribute="centerY" secondItem="Ht0-Z8-uBP" secondAttribute="centerY" constant="-60" id="jJk-Au-2ms"/>
                             <constraint firstItem="5bT-UB-Cbj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kjj-SM-77g"/>
                             <constraint firstItem="60n-WP-Bow" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rHz-nU-CJZ"/>
                             <constraint firstAttribute="bottom" secondItem="5bT-UB-Cbj" secondAttribute="bottom" id="tA9-NY-Dlq"/>
+                            <constraint firstItem="Ht0-Z8-uBP" firstAttribute="top" secondItem="60n-WP-Bow" secondAttribute="bottom" id="zP0-CL-6ee"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="Ht0-Z8-uBP" id="wC6-Er-Bxd"/>
                         <outlet property="headerView" destination="60n-WP-Bow" id="O82-sP-gMc"/>
+                        <outlet property="loadingView" destination="fWh-xP-4Yz" id="RV0-Jy-rG8"/>
                         <outlet property="tableView" destination="5bT-UB-Cbj" id="Auf-b1-O1Y"/>
                     </connections>
                 </viewController>

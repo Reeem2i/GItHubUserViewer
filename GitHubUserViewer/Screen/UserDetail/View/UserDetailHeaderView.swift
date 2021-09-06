@@ -48,4 +48,12 @@ final class UserDetailHeaderView: UIView {
         followingCountLabel.text = String(userDetail.following)
         followerCountLabel.text = String(userDetail.followers)
     }
+    
+    func setMinimumData(_ user: User) {
+        iconImageView.fetchImage(url: user.avatarUrl, defaultImage: R.image.icon_user_noimage())
+        userNameLabel.text = user.name
+        userFullNameLabel.text = R.string.localizable.empty()
+        followingCountLabel.text = R.string.localizable.empty()
+        followerCountLabel.text = R.string.localizable.empty()
+    }
 }

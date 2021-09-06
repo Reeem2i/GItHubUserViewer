@@ -89,8 +89,6 @@
 		37CE02F426E525CE004D3B19 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		37CE02F626E529B0004D3B19 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		37CE02F926E52C39004D3B19 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
-		37CE02FD26E5325F004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		37CE02FF26E532A9004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37CE030126E53646004D3B19 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRequest.swift; sourceTree = "<group>"; };
 		37CE030826E5D06E004D3B19 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -367,7 +365,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ja,
 			);
 			mainGroup = 379E32E526E28CD000865D8F;
 			packageReferences = (
@@ -475,7 +472,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				379E32FD26E28CD400865D8F /* Base */,
-				37CE02FD26E5325F004D3B19 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -483,7 +479,6 @@
 		37CE030026E532A9004D3B19 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				37CE02FF26E532A9004D3B19 /* ja */,
 				37CE032726E68306004D3B19 /* en */,
 			);
 			name = Localizable.strings;

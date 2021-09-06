@@ -9,6 +9,7 @@
 // MARK: - Common
 "ok" = "OK";
 "retry" = "再読み込み";
+"empty" = "---";
 
 // MARK: - Errors
 "error_search_word_empty" = "検索条件を入力してください";
