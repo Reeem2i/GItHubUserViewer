@@ -45,6 +45,7 @@ private extension UserDetailViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.contentInset.top = headerHeight
         tableView.backgroundColor = .clear
+        tableView.tableFooterView = UIView()
         errorViewController.action = { [weak self] in
             self?.viewModel?.fetch()
         }

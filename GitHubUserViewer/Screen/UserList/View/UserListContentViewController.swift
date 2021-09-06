@@ -20,12 +20,7 @@ final class UserListContentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: R.nib.userListCell.name, bundle: nil),
-                           forCellReuseIdentifier: R.nib.userListCell.name)
-        tableView.estimatedRowHeight = estimatedRowHeight
-        tableView.rowHeight = UITableView.automaticDimension
+        setupSubviews()
     }
     
     static func instantiate() -> UserListContentViewController {
@@ -35,6 +30,19 @@ final class UserListContentViewController: UIViewController {
     func updateUserList(_ list: [User]) {
         userList = list
         tableView.reloadData()
+    }
+}
+
+// MARK: - Private Function
+private extension UserListContentViewController {
+    func setupSubviews() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: R.nib.userListCell.name, bundle: nil),
+                           forCellReuseIdentifier: R.nib.userListCell.name)
+        tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
     }
 }
 
