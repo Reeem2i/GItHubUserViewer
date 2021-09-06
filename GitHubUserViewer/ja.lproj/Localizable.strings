@@ -15,3 +15,7 @@
 "error_connection" = "通信に失敗しました";
 "error_parse" = "結果の読み込みに失敗しました";
 "error_unknown" = "予期せぬエラーが発生しました";
+
+// MARK: - User Detail
+"user_following" = "Following";
+"user_follower" = "Follower";
