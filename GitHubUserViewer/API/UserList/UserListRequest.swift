@@ -9,8 +9,7 @@ import Foundation
 
 final class UserListRequest: Request {
     typealias Response = UserListResponse
-    // TODO: URLの定義方法を修正する
-    var url: URL = URL(string: "https://api.github.com/search/users")!
+    var url: URL = URLDefine.makeURL(path: .search)
     var parameter: [String : Any] {
         var parameter: [String: Any] = [:]
         parameter["q"] = searchWord

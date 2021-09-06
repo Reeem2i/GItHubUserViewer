@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserDetailViewController: UIViewController {
+final class UserDetailViewController: UIViewController {
     
     @IBOutlet private weak var headerView: UIView!
     @IBOutlet private weak var tableView: UITableView!

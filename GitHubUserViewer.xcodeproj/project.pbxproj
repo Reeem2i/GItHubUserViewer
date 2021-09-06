@@ -57,6 +57,7 @@
 		37DC5F9526E6AB78000F1738 /* app_main_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9426E6AB77000F1738 /* app_main_image.png */; };
 		37DC5F9826E6B23F000F1738 /* IndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */; };
 		37DC5F9926E6B23F000F1738 /* IndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */; };
+		37DC5F9B26E6BCF0000F1738 /* URLDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC5F9A26E6BCF0000F1738 /* URLDefine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		37DC5F9426E6AB77000F1738 /* app_main_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_main_image.png; sourceTree = "<group>"; };
 		37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCell.swift; sourceTree = "<group>"; };
 		37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorCell.xib; sourceTree = "<group>"; };
+		37DC5F9A26E6BCF0000F1738 /* URLDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				379E334926E3B1E900865D8F /* API.swift */,
 				379E334B26E3D9DF00865D8F /* Request.swift */,
 				379E334D26E3DA0600865D8F /* RequestHeader.swift */,
+				37DC5F9A26E6BCF0000F1738 /* URLDefine.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
 				37DC5F9826E6B23F000F1738 /* IndicatorCell.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
+				37DC5F9B26E6BCF0000F1738 /* URLDefine.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
 				37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */,
 				37CE031326E62AEF004D3B19 /* RepositoryListCell.swift in Sources */,

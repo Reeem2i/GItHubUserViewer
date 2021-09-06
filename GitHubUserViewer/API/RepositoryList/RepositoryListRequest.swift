@@ -11,8 +11,7 @@ import Foundation
 /// API Document: https://docs.github.com/ja/rest/reference/repos#list-repositories-for-a-user
 final class RepositoryListRequest: Request {
     typealias Response = [Repository]
-    // TODO: URLの定義方法を修正する
-    var url: URL = URL(string: "https://api.github.com/users/")!
+    var url: URL = URLDefine.makeURL(path: .users)
     var parameter: [String : Any] = [:]
     
     init(user: User) {
