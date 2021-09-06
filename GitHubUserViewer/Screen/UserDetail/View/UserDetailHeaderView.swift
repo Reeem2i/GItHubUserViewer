@@ -42,7 +42,7 @@ final class UserDetailHeaderView: UIView {
     }
     
     func setUserDetail(_ userDetail: UserDetail) {
-        iconImageView.image = R.image.icon_user_noimage()
+        iconImageView.fetchImage(url: userDetail.avatarUrl, defaultImage: R.image.icon_user_noimage())
         userNameLabel.text = userDetail.name
         userFullNameLabel.text = userDetail.fullName
         followingCountLabel.text = String(userDetail.following)

@@ -17,7 +17,7 @@ final class UserListCell: UITableViewCell {
     }
     
     func setUser(_ user: User) {
-        iconImageView.image = R.image.icon_user_noimage()
+        iconImageView.fetchImage(url: user.avatarUrl, defaultImage: R.image.icon_user_noimage())
         userNameLabel.text = user.name
     }
 }

@@ -49,6 +49,7 @@
 		37CE031026E5EBC2004D3B19 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CE030F26E5EBC2004D3B19 /* Colors.xcassets */; };
 		37CE031326E62AEF004D3B19 /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE031126E62AEF004D3B19 /* RepositoryListCell.swift */; };
 		37CE031426E62AEF004D3B19 /* RepositoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37CE031226E62AEF004D3B19 /* RepositoryListCell.xib */; };
+		37CE031626E6464B004D3B19 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE031526E6464B004D3B19 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		37CE030F26E5EBC2004D3B19 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		37CE031126E62AEF004D3B19 /* RepositoryListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
 		37CE031226E62AEF004D3B19 /* RepositoryListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepositoryListCell.xib; sourceTree = "<group>"; };
+		37CE031526E6464B004D3B19 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				37CE02F426E525CE004D3B19 /* UIAlertController+Extension.swift */,
 				37CE02F626E529B0004D3B19 /* UIViewController+Extension.swift */,
 				37CE030126E53646004D3B19 /* Array+Extension.swift */,
+				37CE031526E6464B004D3B19 /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				370DFED826E50276000F6A79 /* UserDetailViewController.swift in Sources */,
 				379E334726E3ACD000865D8F /* User.swift in Sources */,
 				37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */,
+				37CE031626E6464B004D3B19 /* UIImageView+Extension.swift in Sources */,
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
