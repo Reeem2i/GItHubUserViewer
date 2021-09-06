@@ -6,22 +6,30 @@
 ---
 ## セットアップ
 * Homebrewがない場合はインストール 
-`https://brew.sh/index_ja`
+```
+https://brew.sh/index_ja
+```
 * homebrewでrswiftをインストール
-`$ brew install rswift`
+```
+$ brew install rswift
+```
 * コミットテンプレートの設定
-`$ sh ./Scripts/committemplete.sh`
+```
+$ sh ./Scripts/committemplete.sh
+```
 
 ---
 ## ライブラリ
 * Swift Package Managerで管理しています
-`https://swift.org/package-manager/`
+```
+https://swift.org/package-manager/
+```
 
 ---
 ## 設計
 * 基本はMVVMを採用しています
 * バインディングを行わないようにしています
-    -> ViewModelのstate変更をdelegateで受け取る形でViewを更新します
+    * ViewModelのstate変更をdelegateで受け取る形でViewを更新します
 
 ---
 ## リソースについて
@@ -33,6 +41,8 @@
 ---
 ## 画像引用元
 * アイコン画像を利用しました
-`https://icooon-mono.com/`
+```
+https://icooon-mono.com/
+```
 
 ---
