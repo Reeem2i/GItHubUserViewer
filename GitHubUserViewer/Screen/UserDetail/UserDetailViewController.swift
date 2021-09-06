@@ -48,7 +48,8 @@ extension UserDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let repository = viewModel?.repositoryList[safe: indexPath.row] else { return }
-        // TODO: Webviewを表示
+        let webViewController = RepositoryWebViewController.instantiate(url: repository.repositoryURL)
+        navigationController?.pushViewController(webViewController, animated: true)
     }
 }
 

@@ -83,16 +83,13 @@ extension UserListViewController: UserListViewModelDelegate {
         case .idle:
             break
         case .loading:
-            loadingView.isHidden = false
-            loadingView.startAnimating()
+            loadingView.startLoading()
         case .loaded:
-            loadingView.isHidden = true
-            loadingView.stopAnimating()
+            loadingView.stopLoading()
             add(contentTableViewController, container: containerView)
             contentTableViewController.updateUserList(viewModel.userList)
         case .error(let message):
-            loadingView.isHidden = true
-            loadingView.stopAnimating()
+            loadingView.stopLoading()
             add(errorViewController, container: containerView)
             errorViewController.setMessssge(message)
         }
