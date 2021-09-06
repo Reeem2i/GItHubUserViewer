@@ -25,6 +25,7 @@ class UserDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     static func instantieate(user: User) -> UserDetailViewController {

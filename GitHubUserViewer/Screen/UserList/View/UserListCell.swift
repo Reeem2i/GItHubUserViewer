@@ -27,6 +27,7 @@ private extension UserListCell {
     func setupSubviews() {
         iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
         iconImageView.clipsToBounds = true
-        userNameLabel.font = .systemFont(ofSize: 14.0)
+        userNameLabel.font = .systemFont(ofSize: 16.0, weight: .bold)
+        userNameLabel.textColor = R.color.textPrimary()
     }
 }

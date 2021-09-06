@@ -15,6 +15,7 @@ final class UserListContentViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     weak var delegate: UserListContentViewControllerDelegate?
     private(set) var userList: [User] = []
+    private let estimatedRowHeight: CGFloat = 68.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ final class UserListContentViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: R.nib.userListCell.name, bundle: nil),
                            forCellReuseIdentifier: R.nib.userListCell.name)
+        tableView.estimatedRowHeight = estimatedRowHeight
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     static func instantiate() -> UserListContentViewController {
