@@ -34,7 +34,7 @@ private extension RepositoryListCell {
     func setupSubviews() {
         repositoryNameLabel.font = .systemFont(ofSize: 16.0, weight: .bold)
         repositoryNameLabel.textColor = R.color.textPrimary()
-        languageLabel.font = .systemFont(ofSize: 12.0)
+        languageLabel.font = .systemFont(ofSize: 12.0, weight: .bold)
         languageLabel.textColor = R.color.textSecondary()
         descriptionLabel.font = .systemFont(ofSize: 12.0)
         descriptionLabel.textColor = R.color.textPrimary()

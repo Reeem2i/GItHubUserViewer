@@ -16,16 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_main_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="bdh-XT-PtK">
+                                <rect key="frame" x="-360" y="-88" width="1024" height="1024"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQj-fp-aNb">
+                                <rect key="frame" x="0.0" y="642" width="404" height="130"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">GitHub
+User Viewer</string>
+                                        <attributes>
+                                            <color key="NSColor" name="textSecondary"/>
+                                            <font key="NSFont" size="65" name="DINCondensed-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nQj-fp-aNb" secondAttribute="bottom" constant="90" id="5EF-c2-wVr"/>
+                            <constraint firstItem="bdh-XT-PtK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-55" id="Pgl-7s-iMO"/>
+                            <constraint firstItem="bdh-XT-PtK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-24" id="W97-oD-tIV"/>
+                            <constraint firstItem="nQj-fp-aNb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="beL-nr-xaW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nQj-fp-aNb" secondAttribute="trailing" constant="10" id="pNO-CF-cFJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="app_main_image.png" width="1024" height="1024"/>
+        <namedColor name="textSecondary">
+            <color red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

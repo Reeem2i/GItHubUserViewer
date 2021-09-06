@@ -16,7 +16,7 @@ class UserDetailViewController: UIViewController {
     private var viewModel: UserDetailViewModel?
     private let headerContentView = UserDetailHeaderView.instantiate()
     private var errorViewController = ErrorViewController.instantiate()
-    private let headerHeight: CGFloat = 320.0
+    private let headerHeight: CGFloat = 330.0
     private let estimatedRowHeight: CGFloat = 100.0
     
     override func viewDidLoad() {

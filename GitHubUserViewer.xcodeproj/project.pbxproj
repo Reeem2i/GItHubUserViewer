@@ -54,6 +54,7 @@
 		37CE032026E65F81004D3B19 /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE031F26E65F81004D3B19 /* UIActivityIndicatorView+Extension.swift */; };
 		37CE032526E67DBE004D3B19 /* IdleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */; };
 		37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE032426E67DBE004D3B19 /* IdleViewController.swift */; };
+		37DC5F9526E6AB78000F1738 /* app_main_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9426E6AB77000F1738 /* app_main_image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IdleViewController.storyboard; path = GitHubUserViewer/Screen/UserList/View/IdleViewController.storyboard; sourceTree = SOURCE_ROOT; };
 		37CE032426E67DBE004D3B19 /* IdleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdleViewController.swift; path = GitHubUserViewer/Screen/UserList/View/IdleViewController.swift; sourceTree = SOURCE_ROOT; };
 		37CE032726E68306004D3B19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37DC5F9426E6AB77000F1738 /* app_main_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_main_image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 		37CE032226E66F67004D3B19 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37DC5F9426E6AB77000F1738 /* app_main_image.png */,
 				37CE030026E532A9004D3B19 /* Localizable.strings */,
 				379E32FA26E28CD400865D8F /* Assets.xcassets */,
 				37CE030F26E5EBC2004D3B19 /* Colors.xcassets */,
@@ -391,6 +394,7 @@
 				37CE032526E67DBE004D3B19 /* IdleViewController.storyboard in Resources */,
 				37CE031026E5EBC2004D3B19 /* Colors.xcassets in Resources */,
 				37CE031426E62AEF004D3B19 /* RepositoryListCell.xib in Resources */,
+				37DC5F9526E6AB78000F1738 /* app_main_image.png in Resources */,
 				370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */,
 				370DFEDA26E50285000F6A79 /* UserDetailViewController.storyboard in Resources */,
 				370DFED026E4CE40000F6A79 /* UserListContentViewController.storyboard in Resources */,

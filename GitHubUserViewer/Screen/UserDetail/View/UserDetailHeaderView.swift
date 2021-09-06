@@ -19,22 +19,7 @@ final class UserDetailHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
-        iconImageView.clipsToBounds = true
-        userNameLabel.font = .systemFont(ofSize: 18.0)
-        userNameLabel.textColor = R.color.textPrimary()
-        userFullNameLabel.font = .systemFont(ofSize: 14.0)
-        userFullNameLabel.textColor = R.color.textSecondary()
-        followingCountLabel.font = .systemFont(ofSize: 32.0, weight: .bold)
-        followingCountLabel.textColor = R.color.textPrimary()
-        followingTitleLabel.text = R.string.localizable.user_following()
-        followingTitleLabel.font = .systemFont(ofSize: 14.0)
-        followingTitleLabel.textColor = R.color.textSecondary()
-        followerCountLabel.font = .systemFont(ofSize: 32.0, weight: .bold)
-        followerCountLabel.textColor = R.color.textPrimary()
-        followerTitleLabel.text = R.string.localizable.user_follower()
-        followerTitleLabel.font = .systemFont(ofSize: 14.0)
-        followerTitleLabel.textColor = R.color.textSecondary()
+        setupSubviews()
     }
     
     static func instantiate() -> UserDetailHeaderView {
@@ -52,6 +37,37 @@ final class UserDetailHeaderView: UIView {
     func setMinimumData(_ user: User) {
         iconImageView.fetchImage(url: user.avatarUrl, defaultImage: R.image.icon_user_noimage())
         userNameLabel.text = user.name
+        userFullNameLabel.text = R.string.localizable.empty()
+        followingCountLabel.text = R.string.localizable.empty()
+        followerCountLabel.text = R.string.localizable.empty()
+    }
+}
+
+// MARK: - Private Functions
+private extension UserDetailHeaderView {
+    func setupSubviews() {
+        backgroundColor = R.color.primary()
+        iconImageView.layer.cornerRadius = iconImageView.frame.height / 2
+        iconImageView.clipsToBounds = true
+        userNameLabel.font = .systemFont(ofSize: 24.0, weight: .bold)
+        userNameLabel.textColor = R.color.textOnPrimary()
+        userFullNameLabel.font = .systemFont(ofSize: 14.0)
+        userFullNameLabel.textColor = R.color.textOnPrimarySecond()
+        followingCountLabel.font = .systemFont(ofSize: 32.0, weight: .bold)
+        followingCountLabel.textColor = R.color.textOnPrimary()
+        followingTitleLabel.text = R.string.localizable.user_following()
+        followingTitleLabel.font = .systemFont(ofSize: 14.0)
+        followingTitleLabel.textColor = R.color.textOnPrimarySecond()
+        followerCountLabel.font = .systemFont(ofSize: 32.0, weight: .bold)
+        followerCountLabel.textColor = R.color.textOnPrimary()
+        followerTitleLabel.text = R.string.localizable.user_follower()
+        followerTitleLabel.font = .systemFont(ofSize: 14.0)
+        followerTitleLabel.textColor = R.color.textOnPrimarySecond()
+    }
+    
+    func setPlaceholder() {
+        iconImageView.image = R.image.icon_user_noimage()
+        userNameLabel.text = R.string.localizable.empty()
         userFullNameLabel.text = R.string.localizable.empty()
         followingCountLabel.text = R.string.localizable.empty()
         followerCountLabel.text = R.string.localizable.empty()
