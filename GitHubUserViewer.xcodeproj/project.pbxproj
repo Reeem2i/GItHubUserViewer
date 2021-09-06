@@ -217,19 +217,16 @@
 		379E32F026E28CD000865D8F /* GitHubUserViewer */ = {
 			isa = PBXGroup;
 			children = (
+				37CE032226E66F67004D3B19 /* Resources */,
 				37CE02F326E525B3004D3B19 /* Extensions */,
 				37CE02F026E5230F004D3B19 /* Protocol */,
 				370DFEC326E4B62E000F6A79 /* Screen */,
 				379E334826E3B10100865D8F /* API */,
 				379E334526E39F6B00865D8F /* Model */,
 				379E32F126E28CD000865D8F /* AppDelegate.swift */,
-				379E32FA26E28CD400865D8F /* Assets.xcassets */,
 				379E32FC26E28CD400865D8F /* LaunchScreen.storyboard */,
 				379E32FF26E28CD400865D8F /* Info.plist */,
 				379E334226E39C5E00865D8F /* R.generated.swift */,
-				370DFEC926E4BBDD000F6A79 /* Images.xcassets */,
-				37CE030026E532A9004D3B19 /* Localizable.strings */,
-				37CE030F26E5EBC2004D3B19 /* Colors.xcassets */,
 			);
 			path = GitHubUserViewer;
 			sourceTree = "<group>";
@@ -365,6 +362,17 @@
 				37CE031D26E64F34004D3B19 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37CE032226E66F67004D3B19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37CE030026E532A9004D3B19 /* Localizable.strings */,
+				379E32FA26E28CD400865D8F /* Assets.xcassets */,
+				37CE030F26E5EBC2004D3B19 /* Colors.xcassets */,
+				370DFEC926E4BBDD000F6A79 /* Images.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
