@@ -21,6 +21,7 @@ class UserDetailViewController: UIViewController {
         setupSubviews()
         viewModel?.delegate = self
         viewModel?.fetchUserDetail()
+        viewModel?.fetchRepositoryList()
     }
     
     static func instantieate(user: User) -> UserDetailViewController {

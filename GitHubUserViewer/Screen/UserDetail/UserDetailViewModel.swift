@@ -6,7 +6,7 @@
 //
 
 enum UserDetailViewModelState {
-    case idle, loading, loaded, error(message: String?)
+    case idle, loading, userDetailLoaded, userDetailError(message: String?), repositoryListLoaded, repositoryListError(message: String?)
 }
 
 protocol UserDetailViewModelDelegate: AnyObject {
@@ -24,6 +24,7 @@ final class UserDetailViewModel: ViewModel {
     weak var delegate: UserDetailViewModelDelegate?
     private(set) var user: User?
     private(set) var userDetail: UserDetail?
+    private(set) var repositoryList: [Repository] = []
     
     init(user: User) {
         self.user = user
@@ -31,14 +32,30 @@ final class UserDetailViewModel: ViewModel {
     
     func fetchUserDetail() {
         guard let user = user else { return }
+        state = .loading
         API.request(UserDetailRequest(user: user)) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case .success(let data):
                 self.userDetail = data
-                self.state = .loaded
+                self.state = .userDetailLoaded
             case .failure(let error):
-                self.state = .error(message: error.message)
+                self.state = .userDetailError(message: error.message)
+            }
+        }
+    }
+    
+    func fetchRepositoryList() {
+        guard let user = user else { return }
+        state = .loading
+        API.request(RepositoryListRequest(user: user)) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                self.repositoryList = data.filter { !$0.isFork }
+                self.state = .repositoryListLoaded
+            case .failure(let error):
+                self.state = .repositoryListError(message: error.message)
             }
         }
     }

@@ -42,6 +42,8 @@
 		37CE02FA26E52C39004D3B19 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE02F926E52C39004D3B19 /* UserDetailViewModel.swift */; };
 		37CE02FE26E532A9004D3B19 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37CE030026E532A9004D3B19 /* Localizable.strings */; };
 		37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030126E53646004D3B19 /* Array+Extension.swift */; };
+		37CE030626E5CBFA004D3B19 /* RepositoryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */; };
+		37CE030926E5D06E004D3B19 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE030826E5D06E004D3B19 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		37CE02FD26E5325F004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		37CE02FF26E532A9004D3B19 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37CE030126E53646004D3B19 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListRequest.swift; sourceTree = "<group>"; };
+		37CE030826E5D06E004D3B19 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +240,7 @@
 			children = (
 				379E334626E3ACD000865D8F /* User.swift */,
 				37CE02EC26E51353004D3B19 /* UserDetail.swift */,
+				37CE030826E5D06E004D3B19 /* Repository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 		379E334826E3B10100865D8F /* API */ = {
 			isa = PBXGroup;
 			children = (
+				37CE030426E5CBE4004D3B19 /* RepositoryList */,
 				37CE02E926E510B6004D3B19 /* UserDetail */,
 				379E334F26E3DA1C00865D8F /* UserList */,
 				379E334926E3B1E900865D8F /* API.swift */,
@@ -296,6 +302,14 @@
 				37CE030126E53646004D3B19 /* Array+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37CE030426E5CBE4004D3B19 /* RepositoryList */ = {
+			isa = PBXGroup;
+			children = (
+				37CE030526E5CBFA004D3B19 /* RepositoryListRequest.swift */,
+			);
+			path = RepositoryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,8 +492,10 @@
 				370DFECE26E4CE34000F6A79 /* UserListContentViewController.swift in Sources */,
 				37CE02F726E529B0004D3B19 /* UIViewController+Extension.swift in Sources */,
 				37CE02FA26E52C39004D3B19 /* UserDetailViewModel.swift in Sources */,
+				37CE030926E5D06E004D3B19 /* Repository.swift in Sources */,
 				379E335126E3DA2C00865D8F /* UserListResponse.swift in Sources */,
 				379E334E26E3DA0600865D8F /* RequestHeader.swift in Sources */,
+				37CE030626E5CBFA004D3B19 /* RepositoryListRequest.swift in Sources */,
 				37CE02F226E5231C004D3B19 /* ViewModel.swift in Sources */,
 				37B03BE326E4A68C00C03E1A /* UserListViewController.swift in Sources */,
 				379E32F226E28CD000865D8F /* AppDelegate.swift in Sources */,
