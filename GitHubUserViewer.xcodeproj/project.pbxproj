@@ -55,6 +55,8 @@
 		37CE032526E67DBE004D3B19 /* IdleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */; };
 		37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE032426E67DBE004D3B19 /* IdleViewController.swift */; };
 		37DC5F9526E6AB78000F1738 /* app_main_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9426E6AB77000F1738 /* app_main_image.png */; };
+		37DC5F9826E6B23F000F1738 /* IndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */; };
+		37DC5F9926E6B23F000F1738 /* IndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +109,8 @@
 		37CE032426E67DBE004D3B19 /* IdleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdleViewController.swift; path = GitHubUserViewer/Screen/UserList/View/IdleViewController.swift; sourceTree = SOURCE_ROOT; };
 		37CE032726E68306004D3B19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37DC5F9426E6AB77000F1738 /* app_main_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_main_image.png; sourceTree = "<group>"; };
+		37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCell.swift; sourceTree = "<group>"; };
+		37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			children = (
 				370DFED426E4E801000F6A79 /* ErrorViewController.swift */,
 				370DFED226E4E7E6000F6A79 /* ErrorViewController.storyboard */,
+				37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */,
+				37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 				37CE02FE26E532A9004D3B19 /* Localizable.strings in Resources */,
 				37B03BE126E4A4E200C03E1A /* UserListViewController.storyboard in Resources */,
 				379E32FB26E28CD400865D8F /* Assets.xcassets in Resources */,
+				37DC5F9926E6B23F000F1738 /* IndicatorCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +449,7 @@
 				37CE030226E53646004D3B19 /* Array+Extension.swift in Sources */,
 				37CE031626E6464B004D3B19 /* UIImageView+Extension.swift in Sources */,
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
+				37DC5F9826E6B23F000F1738 /* IndicatorCell.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
 				37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */,

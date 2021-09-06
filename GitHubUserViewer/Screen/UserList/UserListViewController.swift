@@ -87,6 +87,10 @@ extension UserListViewController: UserListContentViewControllerDelegate {
     func didScrollList(_ viewController: UserListContentViewController) {
         searchBar.resignFirstResponder()
     }
+    
+    func didScrollToBottom(_ viewController: UserListContentViewController) {
+        viewModel.fetchAdditionalUser()
+    }
 }
 
 // MARK: - UserListViewModelDelegate
@@ -110,7 +114,7 @@ extension UserListViewController: UserListViewModelDelegate {
             } else {
                 remove(errorViewController)
                 add(contentTableViewController, container: containerView)
-                contentTableViewController.updateUserList(viewModel.userList)
+                contentTableViewController.updateUserList(viewModel.userList, isContinuous: viewModel.isContinuous)
             }
         case .error(let message):
             loadingView.stopLoading()
@@ -119,6 +123,8 @@ extension UserListViewController: UserListViewModelDelegate {
             add(errorViewController, container: containerView)
             errorViewController.setMessssge(message)
             errorViewController.retryButton.isHidden = false
+        case .loadedAdditional:
+            contentTableViewController.updateUserList(viewModel.userList, isContinuous: viewModel.isContinuous)
         }
     }
 }

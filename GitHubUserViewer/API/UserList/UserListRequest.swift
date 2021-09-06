@@ -14,12 +14,15 @@ final class UserListRequest: Request {
     var parameter: [String : Any] {
         var parameter: [String: Any] = [:]
         parameter["q"] = searchWord
+        parameter["page"] = page
         return parameter
     }
     
     let searchWord: String
+    let page: Int
     
-    init(searchWord: String) {
+    init(searchWord: String, page: Int = 1) {
         self.searchWord = searchWord
+        self.page = page
     }
 }
