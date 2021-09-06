@@ -70,13 +70,6 @@ extension UserDetailViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - UIScrollViewDelegate
-extension UserDetailViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-    }
-}
-
 // MARK: - UserDetailViewModelDelegate
 extension UserDetailViewController: UserDetailViewModelDelegate {
     func userDetailViewModel(_ viewModel: UserDetailViewModel, didUpdate state: UserDetailViewModelState) {

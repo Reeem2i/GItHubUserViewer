@@ -9,6 +9,7 @@ import UIKit
 
 protocol UserListContentViewControllerDelegate: AnyObject {
     func userListContentViewController(_ viewController: UserListContentViewController, didSelect user: User)
+    func didScrollList(_ viewController: UserListContentViewController)
 }
 
 final class UserListContentViewController: UIViewController {
@@ -57,5 +58,12 @@ extension UserListContentViewController: UITableViewDataSource {
               let user = userList[safe: indexPath.row] else { return UITableViewCell() }
         cell.setUser(user)
         return cell
+    }
+}
+
+// MARK: - UserListContentViewController
+extension UserListContentViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.didScrollList(self)
     }
 }

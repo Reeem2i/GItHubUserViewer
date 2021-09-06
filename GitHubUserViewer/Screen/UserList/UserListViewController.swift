@@ -66,6 +66,7 @@ private extension UserListViewController {
 // MARK: - UISearchBarDelegate
 extension UserListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         searchText = searchBar.text
     }
     
@@ -81,6 +82,10 @@ extension UserListViewController: UserListContentViewControllerDelegate {
     func userListContentViewController(_ viewController: UserListContentViewController, didSelect user: User) {
         let viewController = UserDetailViewController.instantieate(user: user)
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func didScrollList(_ viewController: UserListContentViewController) {
+        searchBar.resignFirstResponder()
     }
 }
 
