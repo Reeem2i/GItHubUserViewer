@@ -18,31 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="EqR-Ew-gMg">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="16" y="44" width="382" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ieH-3e-yPS"/>
+                                    <constraint firstAttribute="height" constant="60" id="ieH-3e-yPS"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTC-ia-EEO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="792"/>
                             </containerView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VBd-Fy-Hyp">
-                                <rect key="frame" x="197" y="482" width="20" height="20"/>
+                                <rect key="frame" x="197" y="490" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oTC-ia-EEO" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="2He-Ba-SiF"/>
-                            <constraint firstItem="EqR-Ew-gMg" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="BXC-bl-39T"/>
+                            <constraint firstItem="oTC-ia-EEO" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" id="2He-Ba-SiF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EqR-Ew-gMg" secondAttribute="trailing" constant="16" id="BXC-bl-39T"/>
                             <constraint firstItem="VBd-Fy-Hyp" firstAttribute="centerY" secondItem="oTC-ia-EEO" secondAttribute="centerY" id="IQT-Kb-CUG"/>
                             <constraint firstItem="oTC-ia-EEO" firstAttribute="top" secondItem="EqR-Ew-gMg" secondAttribute="bottom" id="IZ2-P8-xPa"/>
                             <constraint firstAttribute="bottom" secondItem="oTC-ia-EEO" secondAttribute="bottom" id="O8i-i1-bxp"/>
                             <constraint firstItem="EqR-Ew-gMg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="bn5-op-iBy"/>
-                            <constraint firstItem="oTC-ia-EEO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fPt-uL-2Jy"/>
+                            <constraint firstItem="oTC-ia-EEO" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="fPt-uL-2Jy"/>
                             <constraint firstItem="VBd-Fy-Hyp" firstAttribute="centerX" secondItem="oTC-ia-EEO" secondAttribute="centerX" id="fZo-eG-Ble"/>
-                            <constraint firstItem="EqR-Ew-gMg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="r5O-p9-gAd"/>
+                            <constraint firstItem="EqR-Ew-gMg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="r5O-p9-gAd"/>
                         </constraints>
                     </view>
                     <connections>

@@ -39,4 +39,9 @@ final class UserListViewModel: ViewModel {
             }
         }
     }
+    
+    func clearResult() {
+        userList = []
+        state = .idle
+    }
 }

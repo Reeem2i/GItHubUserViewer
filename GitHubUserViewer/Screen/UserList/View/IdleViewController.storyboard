@@ -9,51 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Error View Controller-->
+        <!--Idle View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ErrorViewController" customModule="GitHubUserViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="IdleViewController" customModule="GitHubUserViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Hl-uE-azI">
+                                <rect key="frame" x="147" y="308" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="q7N-VA-6Ib"/>
+                                    <constraint firstAttribute="width" secondItem="0Hl-uE-azI" secondAttribute="height" id="yIk-Me-LY4"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hR1-pB-5Pn">
-                                <rect key="frame" x="186.5" y="358" width="41.5" height="20.5"/>
+                                <rect key="frame" x="186.5" y="444" width="41.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-dK-UaV">
-                                <rect key="frame" x="147" y="394.5" width="120" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="gCT-Qd-iGS"/>
-                                    <constraint firstAttribute="height" constant="44" id="t0z-bq-SPO"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="didTapRetryButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7yf-uT-55N"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8QI-8J-z2H"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hR1-pB-5Pn" secondAttribute="trailing" constant="16" id="9aq-Tv-icM"/>
-                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="G8P-CW-1Uh"/>
-                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-80" id="RIU-ou-Nyl"/>
-                            <constraint firstItem="aW9-dK-UaV" firstAttribute="top" secondItem="hR1-pB-5Pn" secondAttribute="bottom" constant="16" id="Tfc-eV-5Lf"/>
-                            <constraint firstItem="aW9-dK-UaV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Xct-6w-Fkh"/>
+                            <constraint firstItem="0Hl-uE-azI" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-80" id="509-Ty-iVT"/>
+                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qet-wl-qAz"/>
+                            <constraint firstItem="0Hl-uE-azI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fIa-tW-n2a"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hR1-pB-5Pn" secondAttribute="trailing" constant="16" id="tlf-7K-QCo"/>
+                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="vvr-UU-L1m"/>
+                            <constraint firstItem="hR1-pB-5Pn" firstAttribute="top" secondItem="0Hl-uE-azI" secondAttribute="bottom" constant="16" id="zFf-NG-13N"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="messageLabel" destination="hR1-pB-5Pn" id="5PX-W2-dO1"/>
-                        <outlet property="retryButton" destination="aW9-dK-UaV" id="9ui-5A-yJR"/>
+                        <outlet property="imageView" destination="0Hl-uE-azI" id="NhT-qQ-M6P"/>
+                        <outlet property="messageLabel" destination="hR1-pB-5Pn" id="cS0-Tj-kMQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72" y="68"/>
+            <point key="canvasLocation" x="71.014492753623188" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>

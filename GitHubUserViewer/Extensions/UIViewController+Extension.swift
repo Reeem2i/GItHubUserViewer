@@ -11,6 +11,7 @@ extension UIViewController {
     func add(_ viewController: UIViewController, container: UIView?) {
         addChild(viewController)
         if let container = container {
+            viewController.view.frame = CGRect(origin: .zero, size: container.frame.size)
             container.addSubview(viewController.view)
         } else {
             view.addSubview(viewController.view)

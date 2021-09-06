@@ -54,6 +54,8 @@
 		37CE031B26E64ED4004D3B19 /* RepositoryWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE031A26E64ED4004D3B19 /* RepositoryWebViewController.swift */; };
 		37CE031E26E64F34004D3B19 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37CE031D26E64F34004D3B19 /* WebKit.framework */; };
 		37CE032026E65F81004D3B19 /* UIActivityIndicatorView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE031F26E65F81004D3B19 /* UIActivityIndicatorView+Extension.swift */; };
+		37CE032526E67DBE004D3B19 /* IdleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */; };
+		37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CE032426E67DBE004D3B19 /* IdleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,9 @@
 		37CE031A26E64ED4004D3B19 /* RepositoryWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWebViewController.swift; sourceTree = "<group>"; };
 		37CE031D26E64F34004D3B19 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		37CE031F26E65F81004D3B19 /* UIActivityIndicatorView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+Extension.swift"; sourceTree = "<group>"; };
+		37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = IdleViewController.storyboard; path = GitHubUserViewer/Screen/UserList/View/IdleViewController.storyboard; sourceTree = SOURCE_ROOT; };
+		37CE032426E67DBE004D3B19 /* IdleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IdleViewController.swift; path = GitHubUserViewer/Screen/UserList/View/IdleViewController.swift; sourceTree = SOURCE_ROOT; };
+		37CE032726E68306004D3B19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +344,8 @@
 		37CE030A26E5E6BF004D3B19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37CE032426E67DBE004D3B19 /* IdleViewController.swift */,
+				37CE032326E67DBE004D3B19 /* IdleViewController.storyboard */,
 				37CE031126E62AEF004D3B19 /* RepositoryListCell.swift */,
 				37CE031226E62AEF004D3B19 /* RepositoryListCell.xib */,
 				37CE030B26E5E74C004D3B19 /* UserDetailHeaderView.swift */,
@@ -491,6 +498,7 @@
 				370DFED326E4E7E6000F6A79 /* ErrorViewController.storyboard in Resources */,
 				37CE031926E64E97004D3B19 /* RepositoryWebViewController.storyboard in Resources */,
 				370DFEC826E4B68E000F6A79 /* UserListCell.xib in Resources */,
+				37CE032526E67DBE004D3B19 /* IdleViewController.storyboard in Resources */,
 				37CE031026E5EBC2004D3B19 /* Colors.xcassets in Resources */,
 				37CE031426E62AEF004D3B19 /* RepositoryListCell.xib in Resources */,
 				370DFECA26E4BBDD000F6A79 /* Images.xcassets in Resources */,
@@ -556,6 +564,7 @@
 				379E334C26E3D9DF00865D8F /* Request.swift in Sources */,
 				370DFED526E4E801000F6A79 /* ErrorViewController.swift in Sources */,
 				379E332F26E385E400865D8F /* RootViewController.swift in Sources */,
+				37CE032626E67DBE004D3B19 /* IdleViewController.swift in Sources */,
 				37CE031326E62AEF004D3B19 /* RepositoryListCell.swift in Sources */,
 				37CE02EF26E521A4004D3B19 /* UserListViewModel.swift in Sources */,
 				370DFECE26E4CE34000F6A79 /* UserListContentViewController.swift in Sources */,
@@ -625,6 +634,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				37CE02FF26E532A9004D3B19 /* ja */,
+				37CE032726E68306004D3B19 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
