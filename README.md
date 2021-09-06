@@ -17,6 +17,8 @@ $ brew install rswift
 ```
 $ sh ./Scripts/committemplete.sh
 ```
+* 認証トークン `access_token.txt` をリポジトリ直下に格納する
+    * 認証トークンはGitHubにアップロードできないため個別で格納する
 
 ---
 ## ライブラリ

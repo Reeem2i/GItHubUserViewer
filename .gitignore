@@ -19,3 +19,6 @@ Package.resolved
 
 ## RSwift
 *.generated.swift
+
+## Token
+access_token.txt

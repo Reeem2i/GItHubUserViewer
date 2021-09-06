@@ -58,6 +58,7 @@
 		37DC5F9826E6B23F000F1738 /* IndicatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */; };
 		37DC5F9926E6B23F000F1738 /* IndicatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */; };
 		37DC5F9B26E6BCF0000F1738 /* URLDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC5F9A26E6BCF0000F1738 /* URLDefine.swift */; };
+		37F6622926E6CD2600139D1E /* access_token.txt in Resources */ = {isa = PBXBuildFile; fileRef = 37F6622826E6CD2600139D1E /* access_token.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		37DC5F9626E6B23F000F1738 /* IndicatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorCell.swift; sourceTree = "<group>"; };
 		37DC5F9726E6B23F000F1738 /* IndicatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndicatorCell.xib; sourceTree = "<group>"; };
 		37DC5F9A26E6BCF0000F1738 /* URLDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLDefine.swift; sourceTree = "<group>"; };
+		37F6622826E6CD2600139D1E /* access_token.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = access_token.txt; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				37B03BDE26E471AF00C03E1A /* README.md */,
 				379E32F026E28CD000865D8F /* GitHubUserViewer */,
 				37B03BDB26E4718800C03E1A /* GitHubUserViewer.app */,
+				37F6622826E6CD2600139D1E /* access_token.txt */,
 				37CE031C26E64F34004D3B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				37CE02FE26E532A9004D3B19 /* Localizable.strings in Resources */,
 				37B03BE126E4A4E200C03E1A /* UserListViewController.storyboard in Resources */,
 				379E32FB26E28CD400865D8F /* Assets.xcassets in Resources */,
+				37F6622926E6CD2600139D1E /* access_token.txt in Resources */,
 				37DC5F9926E6B23F000F1738 /* IndicatorCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
