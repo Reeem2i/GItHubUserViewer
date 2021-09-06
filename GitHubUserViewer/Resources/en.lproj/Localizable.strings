@@ -6,6 +6,9 @@
   
 */
 
+// MARK: - Screen Titles
+"title_user_search" = "ユーザー検索";
+
 // MARK: - Common
 "ok" = "OK";
 "retry" = "再読み込み";

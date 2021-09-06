@@ -21,6 +21,7 @@ class UserDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = viewModel?.user?.name
         setupSubviews()
         viewModel?.delegate = self
         viewModel?.fetch()
@@ -57,7 +58,8 @@ extension UserDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let repository = viewModel?.repositoryList[safe: indexPath.row] else { return }
-        let webViewController = RepositoryWebViewController.instantiate(url: repository.repositoryURL)
+        let webViewController = RepositoryWebViewController.instantiate(url: repository.repositoryURL,
+                                                                        repositoryName: repository.name)
         navigationController?.pushViewController(webViewController, animated: true)
     }
 }

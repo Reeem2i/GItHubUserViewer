@@ -23,6 +23,7 @@ final class UserListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = R.string.localizable.title_user_search()
         viewModel.delegate = self
         setupSubviews()
     }

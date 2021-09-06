@@ -17,9 +17,11 @@ final class RepositoryWebViewController: UIViewController {
     @IBOutlet private weak var refleshButton: UIBarButtonItem!
     
     private var url: URL?
+    private var repositoryName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = repositoryName
         webView.navigationDelegate = self
         webView.backgroundColor = R.color.background()
         loadingView.isHidden = true
@@ -29,9 +31,10 @@ final class RepositoryWebViewController: UIViewController {
         load()
     }
     
-    static func instantiate(url: URL) -> RepositoryWebViewController {
+    static func instantiate(url: URL, repositoryName: String) -> RepositoryWebViewController {
         let viewController = R.storyboard.repositoryWebViewController.instantiateInitialViewController()!
         viewController.url = url
+        viewController.repositoryName = repositoryName
         return viewController
     }
 }

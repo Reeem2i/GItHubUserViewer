@@ -130,11 +130,11 @@
 		370DFEC326E4B62E000F6A79 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				37CE031726E64DC2004D3B19 /* Repository */,
-				370DFED626E50189000F6A79 /* UserDetail */,
 				370DFED126E4E7D4000F6A79 /* Common */,
 				379E332D26E385CB00865D8F /* Root */,
 				37B03BDF26E4A4C200C03E1A /* UserList */,
+				370DFED626E50189000F6A79 /* UserDetail */,
+				37CE031726E64DC2004D3B19 /* Repository */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
